@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F9F9F8;
+  color: #0f172a;
+}
+
+.dark body { background: #121212; color: #f8fafc; }
+
+.font-display { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* subtle paper noise texture */
+.noise-bg {
+  background-image: radial-gradient(rgba(15,23,42,0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+.dark .noise-bg {
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+}
+
+@layer base {
+  :root {
+    --background: 60 8% 97%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 231 78% 60%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 351 83% 61%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+    --radius: 1rem;
+    --chart-1: 199 89% 48%;
+    --chart-2: 84 81% 44%;
+    --chart-3: 43 96% 56%;
+    --chart-4: 231 78% 60%;
+    --chart-5: 351 83% 61%;
+  }
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 210 40% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 89% 55%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 231 78% 65%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 351 83% 61%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 199 89% 55%;
+    --chart-1: 199 89% 55%;
+    --chart-2: 84 81% 55%;
+    --chart-3: 43 96% 60%;
+    --chart-4: 231 78% 65%;
+    --chart-5: 351 83% 65%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; }
+}
+
+/* tactile card look */
+.tactile {
+  box-shadow: 0 4px 0 0 rgba(15,23,42,0.06);
+}
+.dark .tactile {
+  box-shadow: 0 4px 0 0 rgba(0,0,0,0.4);
+}
+
+/* glass */
+.glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(15,23,42,0.06);
+}
+.dark .glass {
+  background: rgba(20,20,20,0.72);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* scroll */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(100,116,139,0.35); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
