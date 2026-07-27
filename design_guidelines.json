@@ -1,0 +1,138 @@
+{
+  "project_name": "LearnFlow AI",
+  "app_type": "hybrid_fullstack",
+  "theme_strategy": {
+    "mode": "system-preferred with light/dark toggle",
+    "description": "Edtech UI demands high clarity for extended study sessions, combined with playful elements. Light mode acts as a clean 'Notion-like' workspace, while dark mode provides a low-eye-strain 'focus' environment for coding and reading."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "'Outfit', sans-serif",
+      "body": "'Figtree', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl font-black tracking-tight",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight",
+      "h3": "text-xl font-semibold",
+      "body": "text-base leading-relaxed text-slate-700 dark:text-slate-300",
+      "label": "text-xs font-bold uppercase tracking-[0.2em]"
+    },
+    "instructions": "Import Google Fonts: Outfit (wght: 400;600;800;900), Figtree (wght: 400;500;600), JetBrains Mono (wght: 400;700)."
+  },
+  "colors": {
+    "archetype": "Hybrid - Notion Structure + Vibrant Play (Duolingo)",
+    "light_mode": {
+      "background": "bg-[#F9F9F8]",
+      "surface": "bg-white",
+      "border": "border-slate-200",
+      "text_primary": "text-slate-900",
+      "text_secondary": "text-slate-500"
+    },
+    "dark_mode": {
+      "background": "bg-[#121212]",
+      "surface": "bg-[#1E1E1E]",
+      "border": "border-zinc-800",
+      "text_primary": "text-slate-50",
+      "text_secondary": "text-slate-400"
+    },
+    "brand_palette": {
+      "primary": "sky-500 (Focus/Action)",
+      "primary_hover": "sky-600",
+      "success": "lime-500 (Streaks/Correct Answers)",
+      "warning": "amber-400 (Badges/XP)",
+      "danger": "rose-400 (Errors/Missed Goals)",
+      "accent": "indigo-500 (AI Insights/Tutor)"
+    }
+  },
+  "layout_and_grids": {
+    "app_shell": "grid grid-cols-1 md:grid-cols-[240px_1fr] min-h-screen",
+    "sidebar": "fixed inset-y-0 left-0 w-[240px] border-r border-border bg-surface p-6 z-40 hidden md:flex flex-col gap-8",
+    "main_content": "md:ml-[240px] p-6 lg:p-12",
+    "dashboard_bento": "grid grid-cols-1 md:grid-cols-3 gap-6",
+    "spacing_philosophy": "Generous spacing. Use p-6, p-8 inside cards to allow content to breathe. Gap-6 or gap-8 between major sections."
+  },
+  "component_guidelines": {
+    "cards": "Flat design with slight roundness (rounded-2xl). border-2 border-border/60. Subtle tactile feel via shadow-[0_4px_0_0_rgba(0,0,0,0.05)] in light mode.",
+    "buttons": "Pill-shaped (rounded-full) for primary actions, rounded-xl for secondary. Must have scale transition on active/click. Example: hover:-translate-y-0.5 active:translate-y-0 active:shadow-none.",
+    "chat_drawer": "Fixed right panel or slide-over drawer (w-80 or w-96). Use Glassmorphism: backdrop-blur-xl bg-white/70 dark:bg-black/60. Must have 1px inner stroke.",
+    "mastery_bars": "Thick rounded progress bars (h-3 rounded-full). Use animated width filling.",
+    "forms": "Use highly customized Shadcn inputs with strong focus rings (focus:ring-2 focus:ring-sky-500 focus:ring-offset-2)."
+  },
+  "gamification": {
+    "streaks": "Show fire icon with lime/amber text. Use bounce animations on increase.",
+    "xp": "Circular progress rings or bold counters with counter-up animation.",
+    "badges": "Display as 3D-looking icons or highly saturated SVG geometric shapes within rounded-xl containers."
+  },
+  "visual_enhancers": {
+    "textures": "Use subtle SVG noise overlays across the background for the Notion 'paper' feel.",
+    "icons": "Use 'lucide-react' for crisp structural navigation. Use 'phosphor-react' (duotone) for playful subject categories.",
+    "motion": "Staggered fade-up (framer-motion) for dashboard bento grid items. Micro-interactions on all hoverable elements."
+  },
+  "libraries": {
+    "charts": "recharts - REQUIRED for Radar Chart (skills) and Heatmap/Bar chart (progress).",
+    "motion": "framer-motion",
+    "icons": "lucide-react (installed), @phosphor-icons/react (need to install)",
+    "notifications": "sonner"
+  },
+  "image_urls": {
+    "teachers": [
+      {
+        "url": "https://images.unsplash.com/photo-1573496800808-56566a492b63?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXQlMjBtb2Rlcm58ZW58MHx8fHwxNzg1MDc1MzQ0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Professional modern teacher avatar"
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1772371272228-f4a8247cfe6d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxmcmllbmRseSUyMGRpdmVyc2UlMjBzdHVkZW50JTIwYXZhdGFyJTIwZmFjZXxlbnwwfHx8fDE3ODUwNzUzNDR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "3D Student Boy Avatar"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1590702841774-45166f031529?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxmcmllbmRseSUyMGRpdmVyc2UlMjBzdHVkZW50JTIwYXZhdGFyJTIwZmFjZXxlbnwwfHx8fDE3ODUwNzUzNDR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Diverse Student Portrait"
+      }
+    ],
+    "subjects": [
+      {
+        "url": "https://images.pexels.com/photos/4078342/pexels-photo-4078342.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Programming & Coding Thumbnail"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1630983358494-96012d838b84?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwxfHxtYXRoJTIwZ2VvbWV0cnklMjBzdHVkZW50JTIwc3R1ZHlpbmd8ZW58MHx8fHwxNzg1MDc1MzM0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Math & Geometry Thumbnail"
+      }
+    ],
+    "gamification": [
+      {
+        "url": "https://images.pexels.com/photos/7267587/pexels-photo-7267587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Gold Medal Achievement Badge"
+      }
+    ],
+    "career": [
+      {
+        "url": "https://images.unsplash.com/photo-1635939412822-8f3ee593d147?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNhcmVlciUyMHBhdGglMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzg1MDc1MzM0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract Career Path Illustration"
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Ensure all text meets 4.5:1 ratio. Provide focus rings on all interactable elements. No hover-only interactions for core functionality.",
+    "data_testid": "ALL interactive and key informational elements MUST include a `data-testid` attribute. E.g., data-testid='start-quiz-button', data-testid='xp-counter'."
+  },
+  "universal_guidelines": [
+    "DO NOT use Inter or standard sans for Headings. Use Outfit.",
+    "Do not use generic centered layouts. Emphasize left-aligned reading structures for lessons.",
+    "Do not use dark colors as gradients.",
+    "Never use purely transparent backgrounds under overlays (Chat drawer MUST have solid or blurred background).",
+    "Avoid AI emojis (🤖🧠💡). Use Lucide or Phosphor icons instead.",
+    "Every interaction needs micro-animations (hover states, transitions).",
+    "Use layered design elements with clear z-index hierarchy."
+  ],
+  "instructions_to_main_agent": [
+    "You have .js files, NOT .tsx files. Write all React code as standard JavaScript.",
+    "Install recharts, framer-motion, @phosphor-icons/react and sonner via yarn before starting.",
+    "Build the dashboard using a Bento-grid layout model. Create dedicated sections for Progress, AI Tutor Drawer, and Learning Path Cards.",
+    "Ensure the UI reflects 'Duolingo meets Notion' - structural blocks but with fun, vibrant pill buttons and gamified progress elements.",
+    "Always apply data-testid attributes to buttons, links, inputs, and major containers."
+  ]
+}
