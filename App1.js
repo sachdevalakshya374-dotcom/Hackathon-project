@@ -35,3 +35,33 @@ function StudentGate({ children }) {
   }
   return children;
 }
+function App() {
+  return (
+    <ThemeProvider>
+      <AuthProvider>
+        <BrowserRouter>
+          <Toaster richColors position="top-right" />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/onboarding" element={<Protected role="student"><Onboarding /></Protected>} />
+            <Route path="/diagnostic" element={<Protected role="student"><Diagnostic /></Protected>} />
+            <Route path="/app" element={<Protected role="student"><StudentGate><AppShell><Navigate to="/app/path" replace /></AppShell></StudentGate></Protected>} />
+            <Route path="/app/path" element={<Protected role="student"><StudentGate><AppShell><Path /></AppShell></StudentGate></Protected>} />
+            <Route path="/app/lessons" element={<Protected role="student"><StudentGate><AppShell><Path /></AppShell></StudentGate></Protected>} />
+            <Route path="/app/lesson/:moduleId" element={<Protected role="student"><StudentGate><AppShell><Lesson /></AppShell></StudentGate></Protected>} />
+            <Route path="/app/progress" element={<Protected role="student"><StudentGate><AppShell><Progress /></AppShell></StudentGate></Protected>} />
+            <Route path="/app/career" element={<Protected role="student"><StudentGate><AppShell><Career /></AppShell></StudentGate></Protected>} />
+            <Route path="/teacher" element={<Protected role="teacher"><AppShell><TeacherDashboard /></AppShell></Protected>} />
+            <Route path="/teacher/student/:sid" element={<Protected role="teacher"><AppShell><TeacherStudent /></AppShell></Protected>} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
+  );
+}
+
+export default App;
+
